@@ -37,8 +37,11 @@ def custom_score(game, player):
         The heuristic value of the current game state to the specified player.
     """
 
-    # TODO: finish this function!
-    raise NotImplementedError
+    active_moves = len(game.get_legal_moves(game.active_player))
+    if player == game.active_player:
+        return active_moves
+    else:
+        return 8-active_moves
 
 
 class CustomPlayer:
