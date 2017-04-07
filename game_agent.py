@@ -37,7 +37,7 @@ def custom_score(game, player):
         The heuristic value of the current game state to the specified player.
     """
 
-    active_moves = len(game.get_legal_moves(game.active_player))
+    active_moves = float(len(game.get_legal_moves(game.active_player)))
     if player == game.active_player:
         return active_moves
     else:
